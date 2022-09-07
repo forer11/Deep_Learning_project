@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Deep-Clustering-Network/.idea/Deep-Clustering-Network.iml" filepath="$PROJECT_DIR$/../Deep-Clustering-Network/.idea/Deep-Clustering-Network.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Mean-Shifted-Anomaly-Detection/.idea/Mean-Shifted-Anomaly-Detection.iml" filepath="$PROJECT_DIR$/../Mean-Shifted-Anomaly-Detection/.idea/Mean-Shifted-Anomaly-Detection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/PANDA.iml" filepath="$PROJECT_DIR$/.idea/PANDA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../anomalib/.idea/anomalib.iml" filepath="$PROJECT_DIR$/../anomalib/.idea/anomalib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../detectron2/.idea/detectron2.iml" filepath="$PROJECT_DIR$/../detectron2/.idea/detectron2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../GNN-HandsON/.idea/gnn-warmup.iml" filepath="$PROJECT_DIR$/../GNN-HandsON/.idea/gnn-warmup.iml" />
+    </modules>
+  </component>
+</project>
