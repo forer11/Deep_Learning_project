@@ -114,19 +114,10 @@ def get_loaders(dataset, label_class, batch_size, backbone):
     if dataset == "custom":
         transform = transform_color if backbone == 152 else transform_resnet18
         coarse = {}
-        print('getting train objects...')
-        train_file_name = 'saved_training_data'
-        train_files_list = get_files_list(train_file_name, 10)
-        all_objects_train = get_extracted_objects_dict(train_files_list)
-        #
-        # print('getting test objects...')
-        # test_file_name = 'saved_test_data'
-        # test_files_list = get_files_list(test_file_name, 36)
-        # all_objects_test = get_extracted_objects_dict(test_files_list)
 
-        trainset = XrayDataset(csv_file=CSV_BASE_PATH + 'train_easy_new_short.csv', root_dir=IMG_PATH, transform=transform, all_objects=all_objects_train)
-        trainset_1 = XrayDataset(csv_file=CSV_BASE_PATH + 'train_easy_new_short.csv', root_dir=IMG_PATH, transform=Transform(), all_objects=all_objects_train)
-        testset = XrayDataset(csv_file=CSV_BASE_PATH + 'test_easy_new_short.csv', root_dir=IMG_PATH, transform=transform, all_objects={})
+        trainset = XrayDataset(csv_file=CSV_BASE_PATH + 'train_easy_new_short.csv', root_dir=IMG_PATH, transform=transform)
+        trainset_1 = XrayDataset(csv_file=CSV_BASE_PATH + 'train_easy_new_short.csv', root_dir=IMG_PATH, transform=Transform())
+        testset = XrayDataset(csv_file=CSV_BASE_PATH + 'test_easy_new_short.csv', root_dir=IMG_PATH, transform=transform)
 
         idx = np.array(trainset.targets) == label_class
         testset.targets = [int(t != label_class) for t in testset.targets]

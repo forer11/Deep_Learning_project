@@ -137,7 +137,7 @@ class XrayDataset(Dataset):
         else:
             return CLASSES['N']
 
-    def __init__(self, csv_file, root_dir, transform=None, all_objects=None):
+    def __init__(self, csv_file, root_dir, transform=None):
         """
         Args:
             csv_file (string): Path to the csv file with annotations.
@@ -157,10 +157,6 @@ class XrayDataset(Dataset):
         # self.only_pliers_set = filter_other_classes(pliers_set, [knife_set, gun_set, scissors_set, wrench_set])
         # self.only_scissors_set = filter_other_classes(scissors_set, [knife_set, pliers_set, gun_set, wrench_set])
         # self.only_wrench_set = filter_other_classes(wrench_set, [knife_set, pliers_set, scissors_set, gun_set])
-
-        if all_objects is None:
-            all_objects = []
-        self.all_objects = all_objects
 
         self.xray_frame = pd.read_csv(csv_file)
         self.root_dir = root_dir
